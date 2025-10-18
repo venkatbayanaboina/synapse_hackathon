@@ -1,0 +1,128 @@
+/* ========== Rules Container ========== */
+.rules-container {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.7;
+    position: relative;
+}
+
+/* ========== Back Button ========== */
+.back-button {
+    background-color: #00a86b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-weight: 600;
+    font-size: 1em;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 168, 107, 0.2);
+}
+
+.back-button:hover {
+    background-color: #008f5a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 168, 107, 0.3);
+}
+
+/* ========== Heading Styles ========== */
+.rules-container h1 {
+    font-size: 2.4em;
+    color: #00a86b;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.rules-container h2 {
+    font-size: 1.6em;
+    color: #008f5a;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* ========== Paragraph and List Styles ========== */
+.rules-content p {
+    margin-bottom: 16px;
+    font-size: 1em;
+}
+
+.rules-content ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.rules-content ul li {
+    margin-bottom: 10px;
+}
+
+/* ========== Warning and Caution Styles ========== */
+.important-warning {
+    background-color: #fff5f5;
+    border-left: 5px solid #e63946;
+    padding: 15px;
+    margin: 20px 0;
+    font-weight: 600;
+    color: #c42735;
+    border-radius: 8px;
+}
+
+.caution-notice {
+    background-color: #fffdea;
+    border-left: 5px solid #f4c430;
+    padding: 15px;
+    margin: 20px 0;
+    font-weight: 600;
+    color: #997300;
+    border-radius: 8px;
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 768px) {
+    .rules-container {
+        padding: 25px;
+        margin: 40px 20px;
+    }
+
+    .rules-container h1 {
+        font-size: 2em;
+    }
+
+    .rules-container h2 {
+        font-size: 1.4em;
+    }
+
+    .back-button {
+        font-size: 0.95em;
+        padding: 9px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .rules-container {
+        padding: 20px;
+        margin: 30px 15px;
+    }
+
+    .rules-container h1 {
+        font-size: 1.7em;
+    }
+
+    .rules-container h2 {
+        font-size: 1.2em;
+    }
+
+    .back-button {
+        width: 100%;
+        text-align: center;
+    }
+}

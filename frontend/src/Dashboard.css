@@ -1,0 +1,243 @@
+/* ========== Dashboard Container ========== */
+.dashboard-container {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    color: #333;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    position: relative; /* Needed for positioning the feedback button */
+}
+
+/* ========== Dashboard Title ========== */
+.dashboard-title {
+    font-size: 2.6em;
+    color: #00a86b;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+/* ========== Actions Grid ========== */
+.actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+/* ========== Cards ========== */
+.card {
+    background-color: #f9f9f9;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+    font-size: 1.7em;
+    color: #00a86b;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* ========== Buttons ========== */
+.card button,
+.rules-regulations-button,
+.main-action-button,
+.logout-button,
+.return-button {
+    padding: 12px 24px;
+    font-size: 1em;
+    border-radius: 8px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+/* --- Primary Button --- */
+.card button,
+.rules-regulations-button,
+.main-action-button {
+    background-color: #00a86b;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 168, 107, 0.2);
+}
+
+.card button:hover,
+.rules-regulations-button:hover,
+.main-action-button:hover {
+    background-color: #008f5a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 168, 107, 0.3);
+}
+
+/* --- Logout Button --- */
+.logout-button {
+    background-color: #e63946;
+    color: white;
+    box-shadow: 0 4px 12px rgba(230, 57, 70, 0.2);
+}
+
+.logout-button:hover {
+    background-color: #c42735;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(230, 57, 70, 0.3);
+}
+
+/* --- Return Button (Secondary) --- */
+.return-button {
+    background-color: #888;
+    color: white;
+}
+
+.return-button:hover {
+    background-color: #666;
+    transform: translateY(-2px);
+}
+
+/* ========== Profile Button ========== */
+.profile-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #f9f9f9;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.3s;
+    z-index: 1000;
+}
+
+.profile-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.profile-button img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #00a86b;
+}
+
+/* ========== Secondary Actions ========== */
+.dashboard-secondary-actions {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* ========== Main Actions ========== */
+.main-actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 768px) {
+    .dashboard-container {
+        padding: 25px;
+        margin: 40px 20px;
+    }
+
+    .dashboard-title {
+        font-size: 2.2em;
+        margin-bottom: 30px;
+    }
+
+    .actions {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    .main-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .main-action-button,
+    .rules-regulations-button,
+    .logout-button,
+    .return-button {
+        width: 90%;
+        max-width: 280px;
+    }
+
+    /* Feedback button on small screens */
+    .feedback-button {
+        left: 50%;
+        transform: translateX(-50%);
+        top: auto; /* Remove top positioning */
+        bottom: 20px; /* Position at the bottom */
+        width: calc(100% - 40px); /* Make it wider */
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-container {
+        padding: 20px;
+        margin: 30px 15px;
+    }
+
+    .dashboard-title {
+        font-size: 1.8em;
+        margin-bottom: 25px;
+    }
+}
+
+/* Feedback Button on Dashboard (Dashboard.css) */
+.feedback-button {
+    position: fixed; /* Fixed position relative to viewport */
+    top: 20px;
+    left: 20px; /* Position on the left side */
+    z-index: 1000; /* Ensure it's above other content */
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-weight: 600;
+    background-color: var(--primary-color); /* Uses primary theme color */
+    color: var(--button-text-color);
+    box-shadow: 0 4px 10px rgba(var(--primary-color-rgb), 0.2);
+    border: none; /* No border initially */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.feedback-button:hover {
+    background-color: var(--button-primary-hover-bg);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(var(--primary-color-rgb), 0.3);
+}
+@media (max-width: 768px) {
+    .feedback-button {
+        left: 20px;
+        top: auto;
+        bottom: 20px;
+        transform: none;
+        width: auto;
+        max-width: none;
+    }
+}
